@@ -13,3 +13,8 @@ def init_words(file_to_open, file_to_write):
     sorted_words = dict(sorted(words.items()))
     with open(file_to_write, "w") as file:
         json.dump(sorted_words, file)
+
+
+def on_screen_close(window):
+    window.destroy()
+    window = None
